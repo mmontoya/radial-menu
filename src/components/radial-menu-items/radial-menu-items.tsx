@@ -32,7 +32,8 @@ export class RadialMenuItems {
   getPaths() {
     const inner_rad = this.size * 0.2;
     const text_rad = this.size * 0.33;
-    const outer_rad = this.size * 0.5;
+    // don't exceed the diameter or it will clip
+    const outer_rad = this.size * 0.47;
     const halfSize = this.size * 0.5;
     const X0 = halfSize;
     const Y0 = halfSize;

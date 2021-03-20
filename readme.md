@@ -1,8 +1,93 @@
 ![Built With Stencil](https://img.shields.io/badge/-Built%20With%20Stencil-16161d.svg?logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjIuMSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIgNTEyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI%2BCjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI%2BCgkuc3Qwe2ZpbGw6I0ZGRkZGRjt9Cjwvc3R5bGU%2BCjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik00MjQuNywzNzMuOWMwLDM3LjYtNTUuMSw2OC42LTkyLjcsNjguNkgxODAuNGMtMzcuOSwwLTkyLjctMzAuNy05Mi43LTY4LjZ2LTMuNmgzMzYuOVYzNzMuOXoiLz4KPHBhdGggY2xhc3M9InN0MCIgZD0iTTQyNC43LDI5Mi4xSDE4MC40Yy0zNy42LDAtOTIuNy0zMS05Mi43LTY4LjZ2LTMuNkgzMzJjMzcuNiwwLDkyLjcsMzEsOTIuNyw2OC42VjI5Mi4xeiIvPgo8cGF0aCBjbGFzcz0ic3QwIiBkPSJNNDI0LjcsMTQxLjdIODcuN3YtMy42YzAtMzcuNiw1NC44LTY4LjYsOTIuNy02OC42SDMzMmMzNy45LDAsOTIuNywzMC43LDkyLjcsNjguNlYxNDEuN3oiLz4KPC9zdmc%2BCg%3D%3D&colorA=16161d&style=flat-square)
 
-# Stencil Component Starter
 
-This is a starter project for building a standalone Web Component using Stencil.
+# Radial Menu
+
+![Preview of the radial component](./assets/radial_menu.png)
+   
+**Note**: Here the component is pictured in its open state.
+Clicking its center toggles the visibility of the menu items.
+
+# Aim
+
+A common strategy for responsive websites is to collapse the menu bar into a 'hamburger menu' which then offers a menu that slides into view. This is often clunky and disorienting. This component offers a solution that is unobtrusive and gives control over its location to the user.
+
+# Web Component
+
+This is a _Web Component_ , which means it is framework agnostic and therefore has no dependencies on any library or framework. It runs entirely on web standards which means it can be used stand-alone in the broswer or integrated into the framework of library of your choice (such as Angular or React).
+
+Because they are closer to the metal, web-components are more performant compared to their runtime-dependent counterparts.
+
+# Features
+
+The radial menu implements the following features:
+
+1. **Dynamic Menu** 
+- The radial menu dynamically resizes itself according to the number of objects passed to it.
+
+2. **Colored Sections**
+- Each menu item can have its background color set independent of its neighbors.
+
+3. **Center Thumb**
+- The center touch target can have its color set.
+  
+4. **Draggable**
+- Position the menu anywhere on the page.
+- Its location is saved to local storage so that it will appear in the last used location
+  
+# Usage
+1. Import the module into your index.html
+```bash
+<script type="module" src="/build/radial-menu.esm.js"></script>
+<script nomodule src="/build/radial-menu.js"></script>>
+```
+
+2. Create the custom tag setting its properties
+```bash
+ <radial-menu
+      menu-items="[]"
+      font-color="#fff"
+      center-color="#0088cc"
+      size="120"
+    ></radial-menu>
+```
+**Note**: If you do not wish to have the hamburger icon within a colored circle, set 'center-color' to 'none'
+
+3. Create a &lt;script&gt; tag alonside your component that describes the event callbacks you would like the component to handle, along with an array of menu items describing their color and label to display.
+```bash
+ <script>
+      const handleAccountClicked = () => {
+        console.log('Account Clicked!');
+      };
+      const handleCartClicked = () => {
+        console.log('Cart Clicked!');
+      };
+      const handleProfileClicked = () => {
+        console.log('Profile Clicked!');
+      };
+
+      const handleOrdersClicked = () => {
+        console.log('Orders Clicked!');
+      };
+
+      const handleHomeClicked = () => {
+        console.log('Home Clicked!');
+      };
+
+      const radialMenuElement = document.querySelector('radial-menu');
+      radialMenuElement.menuItems = [
+        { color: '#0088cc', label: 'Account', callback: handleAccountClicked },
+        { color: '#0088cc', label: 'Cart', callback: handleCartClicked },
+        { color: '#0088cc', label: 'Profile', callback: handleProfileClicked },
+        { color: '#0088cc', label: 'Orders', callback: handleOrdersClicked },
+        { color: '#0088cc', label: 'Home', callback: handleHomeClicked },
+      ];
+    </script>
+```
+That's it!
+
+
+# How to Use Stencil
 
 Stencil is also great for building entire apps. For that, use the [stencil-app-starter](https://github.com/ionic-team/stencil-app-starter) instead.
 
