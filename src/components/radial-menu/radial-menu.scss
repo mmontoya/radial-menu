@@ -1,0 +1,12 @@
+.radialMenu {
+  display: block;
+  font-family: 'Lato', 'Franklin Gothic Medium', 'Arial Narrow', Arial,
+    sans-serif;
+  opacity: 0.2;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.radialMenu:hover {
+  opacity: 1;
+}

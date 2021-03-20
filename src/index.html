@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"
+    />
+    <title>Stencil Component Starter</title>
+
+    <script type="module" src="/build/radial-menu.esm.js"></script>
+    <script nomodule src="/build/radial-menu.js"></script>
+  </head>
+  <body style="background: #122d5e">
+    <radial-menu
+      menu-items="[]"
+      font-color="#fff"
+      center-color="#0088cc"
+      size="120"
+    ></radial-menu>
+    <script>
+      const handleAccountClicked = () => {
+        console.log('Account Clicked!');
+      };
+      const handleCartClicked = () => {
+        console.log('Cart Clicked!');
+      };
+      const handleProfileClicked = () => {
+        console.log('Profile Clicked!');
+      };
+
+      const handleOrdersClicked = () => {
+        console.log('Orders Clicked!');
+      };
+
+      const handleHomeClicked = () => {
+        console.log('Home Clicked!');
+      };
+
+      const radialMenuElement = document.querySelector('radial-menu');
+      radialMenuElement.menuItems = [
+        { color: '#0088cc', label: 'Account', callback: handleAccountClicked },
+        { color: '#0088cc', label: 'Cart', callback: handleCartClicked },
+        { color: '#0088cc', label: 'Profile', callback: handleProfileClicked },
+        { color: '#0088cc', label: 'Orders', callback: handleOrdersClicked },
+        { color: '#0088cc', label: 'Home', callback: handleHomeClicked },
+      ];
+    </script>
+  </body>
+</html>

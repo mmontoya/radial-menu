@@ -1,0 +1,15 @@
+#menu {
+  display: block;
+}
+
+#menu .section:hover {
+  opacity: 0.5;
+}
+
+#menu .section:active {
+  opacity: 0.9;
+}
+
+.dragging {
+  filter: drop-shadow(2px 2px 4px rgba(0.1, 0.1, 0.1, 0.5));
+}
