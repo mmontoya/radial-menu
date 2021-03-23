@@ -8,6 +8,8 @@
 **Note**: Here the component is pictured in its open state.
 Clicking its center toggles the visibility of the menu items.
 
+# Preview In Action
+ ![Preview gif of the radial component](./assets/radial_menu.gif)
 # Aim
 
 A common strategy for responsive websites is to collapse the menu bar into a 'hamburger menu' which then offers a menu that slides into view. This is often clunky and disorienting. This component offers a solution that is unobtrusive and gives control over its location to the user.
@@ -39,7 +41,7 @@ The radial menu implements the following features:
 1. Import the module into your index.html
 ```bash
 <script type="module" src="/build/radial-menu.esm.js"></script>
-<script nomodule src="/build/radial-menu.js"></script>>
+<script nomodule src="/build/radial-menu.js"></script>
 ```
 
 2. Create the custom tag setting its properties
@@ -83,6 +85,23 @@ The radial menu implements the following features:
         { color: '#0088cc', label: 'Home', callback: handleHomeClicked },
       ];
     </script>
+```
+
+Or import into your project via NPM
+```
+npm install @montoyland/radial-menu
+```
+In this case, when including via an html script tag you'll find the module at:
+
+```
+		<script
+			type="module"
+			src="node_modules/@montoyland/radial-menu/dist/radial-menu/radial-menu.esm.js"
+		></script>
+		<script
+			nomodule
+			src="node_modules/@montoyland/radial-menu/dist/radial-menu/build/radial-menu.js"
+		></script>
 ```
 That's it!
 

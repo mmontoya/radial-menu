@@ -1,7 +1,15 @@
 {
-  "name": "radial-menu",
+  "name": "@montoyland/radial-menu",
   "version": "0.0.1",
   "description": "A Web Component",
+  "author": {
+    "name": "Michael Montoya",
+    "email": "montoyland@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mmontoya/radial-menu.git"
+},
   "main": "dist/index.cjs.js",
   "module": "dist/custom-elements/index.js",
   "es2015": "dist/esm/index.mjs",
@@ -19,7 +27,10 @@
     "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
-    "generate": "stencil generate"
+    "generate": "stencil generate",
+    "publish-lib": "npm run build && npm publish --access public",
+    "publish-beta": "npm run build && npm publish --tag beta",
+    "publish-dryrun": "npm run build && npm publish --dry-run"
   },
   "dependencies": {
     "@stencil/core": "^2.0.1"

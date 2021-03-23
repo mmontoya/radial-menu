@@ -9,8 +9,10 @@
 
 | Property     | Attribute     | Description | Type         | Default     |
 | ------------ | ------------- | ----------- | ------------ | ----------- |
+| `color`      | `color`       |             | `string`     | `undefined` |
 | `isDragging` | `is-dragging` |             | `boolean`    | `false`     |
 | `menuItems`  | --            |             | `MenuItem[]` | `undefined` |
+| `size`       | `size`        |             | `number`     | `undefined` |
 | `visible`    | `visible`     |             | `boolean`    | `false`     |
 
 

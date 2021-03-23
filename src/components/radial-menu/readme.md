@@ -12,6 +12,7 @@
 | `centerColor` | `center-color` |             | `string`     | `undefined` |
 | `fontColor`   | `font-color`   |             | `string`     | `undefined` |
 | `menuItems`   | --             |             | `MenuItem[]` | `undefined` |
+| `size`        | `size`         |             | `number`     | `undefined` |
 
 
 ## Dependencies
