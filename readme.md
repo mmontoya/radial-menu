@@ -9,7 +9,7 @@
 Clicking its center toggles the visibility of the menu items.
 
 # Preview In Action
- ![Preview gif of the radial component](./assets/radial_menu.gif)
+ ![Preview gif of the radial component](./assets/radial-menu.gif)
 # Aim
 
 A common strategy for responsive websites is to collapse the menu bar into a 'hamburger menu' which then offers a menu that slides into view. This is often clunky and disorienting. This component offers a solution that is unobtrusive and gives control over its location to the user.
