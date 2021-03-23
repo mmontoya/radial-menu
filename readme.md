@@ -94,14 +94,14 @@ npm install @montoyland/radial-menu
 In this case, when including via an html script tag you'll find the module at:
 
 ```
-		<script
-			type="module"
-			src="node_modules/@montoyland/radial-menu/dist/radial-menu/radial-menu.esm.js"
-		></script>
-		<script
-			nomodule
-			src="node_modules/@montoyland/radial-menu/dist/radial-menu/build/radial-menu.js"
-		></script>
+<script
+  type="module"
+  src="node_modules/@montoyland/radial-menu/dist/radial-menu/radial-menu.esm.js"
+></script>
+<script
+  nomodule
+  src="node_modules/@montoyland/radial-menu/dist/radial-menu/build/radial-menu.js"
+></script>
 ```
 That's it!
 
